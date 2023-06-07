@@ -13,7 +13,7 @@ describe("Add Products", () => {
     cy.get("#password").type("secret_sauce");
     cy.get("#login-button").click();
     cy.get(".inventory_item_description").each(($el, index, $list) => {
-      if ($el.text().includes(data.products)){
+      if ($el.text().includes(data.product)){
         cy.xpath("//button[@id='add-to-cart-sauce-labs-backpack']").click();
         //button[@class='btn btn_primary btn_small btn_inventory']
       }
