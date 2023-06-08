@@ -28,7 +28,7 @@ describe("Login Funcionality", () => {
         "Epic sadface: Username and password do not match any user in this service"
       );
     });
-    it.only("Login Test with example ", () => {
+    it.only("Login Test with fixture ", () => {
       cy.visit("https://www.saucedemo.com/");
       cy.get("#user-name").type(data.user_name);
       cy.get("#password").type('1234');
