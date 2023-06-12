@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+
+Cypress.Commands.add("LoginTo_SouseDemo_HomePage",() =>{
+      
+          cy.fixture("example").then(function (data) {
+          cy.visit("/");
+          cy.get("#user-name").type(data.user_name);
+          cy.get("#password").type(data.password);
+          cy.get("#login-button").click();
+        });
+})
+
+
+
+
+
+
