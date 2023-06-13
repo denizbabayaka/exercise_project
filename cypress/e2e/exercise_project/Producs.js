@@ -1,5 +1,8 @@
 /// <reference types="Cypress"/>
 
+//const { default: Login_Page_PO } = require("../../support/PageObjects/Login_Page_PO");
+import Login_Page_PO from "../../support/PageObjects/Login_Page_PO";
+
 describe("Add Products", () => {
   before(function () {
     cy.fixture("example").then(function (data) {
@@ -7,10 +10,11 @@ describe("Add Products", () => {
     });
   });
   it("Add product to basket", () => {
-    cy.visit("https://www.saucedemo.com/");
-    cy.get("#user-name").type("standard_user");
-    cy.get("#password").type("secret_sauce");
-    cy.get("#login-button").click();
+    Login_Page_PO.Login_Page(data.user_name,data.password);
+    // cy.visit("https://www.saucedemo.com/");
+    // cy.get("#user-name").type("standard_user");
+    // cy.get("#password").type("secret_sauce");
+    // cy.get("#login-button").click();
     cy.get(".inventory_item_description").each(($el, index, $list) => {
       if ($el.text().includes(data.product)) {
         cy.xpath("//button[@id='add-to-cart-sauce-labs-backpack']").click();

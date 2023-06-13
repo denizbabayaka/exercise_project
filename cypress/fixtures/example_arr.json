@@ -1,16 +1,16 @@
 [
   {
-    "test_name": "negative_test",
+    "test_name": "positive_test",
     "user_name": "standard_user",
-    "password": "secret_sauce1",
+    "password": "secret_sauce",
     "message": "Epic sadface: Username and password do not match any user in this service",
     "product": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."
   },
 
   {
-    "test_name": "positive_test",
+    "test_name": "negative_test",
     "user_name": "standard_user",
-    "password": "secret_sauce",
+    "password": "secret_sauce1",
     "message": "Epic sadface: Username and password do not match any user in this service",
     "produc1": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."
   }
